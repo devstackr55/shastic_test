@@ -1,5 +1,5 @@
-require '~/shastic_challenge/models/pageview'
-require '~/shastic_challenge/models/visit'
+require '/app/models/pageview'
+require '/app/models/visit'
 
 describe Pageview do
   it 'should disallow duplicate timestamp' do

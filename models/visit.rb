@@ -1,6 +1,6 @@
-require '~/shastic_challenge/models/application_record'
-require '~/shastic_challenge/models/pageview'
-require '~/shastic_challenge/models/concerns/evid_validator'
+require '/app/models/application_record'
+require '/app/models/pageview'
+require '/app/models/concerns/evid_validator'
 
 class Visit < ApplicationRecord
   attr_accessor :pageviews_attrs

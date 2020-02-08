@@ -1,4 +1,4 @@
-require '~/shastic_challenge/models/visit'
+require '/app/models/visit'
 
 class VisitsCreator
   def initialize(visits_data)

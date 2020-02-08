@@ -1,8 +1,8 @@
-require '~/shastic_challenge/db/migrator'
-require '~/shastic_challenge/config/initializers/base_datafeed_url_loader'
-require '~/shastic_challenge/lib/datafeed/client'
-require '~/shastic_challenge/lib/datafeed/parser'
-require '~/shastic_challenge/lib/services/visits_creator'
+require '/app/db/migrator'
+require '/app/config/initializers/base_datafeed_url_loader'
+require '/app/lib/datafeed/client'
+require '/app/lib/datafeed/parser'
+require '/app/lib/services/visits_creator'
 
 def call
   begin
@@ -23,5 +23,3 @@ def call
     p "Unable to populate data: #{e.message}"
   end
 end
-
-call

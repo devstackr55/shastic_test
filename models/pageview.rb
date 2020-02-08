@@ -1,4 +1,4 @@
-require '~/shastic_challenge/models/application_record'
+require '/app/models/application_record'
 
 class Pageview < ApplicationRecord
   belongs_to :visit

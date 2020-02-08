@@ -1,4 +1,4 @@
-require '~/shastic_challenge/lib/constants'
+require '/app/lib/constants'
 
 class Parser
   include Constants

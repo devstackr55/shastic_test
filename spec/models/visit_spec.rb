@@ -1,4 +1,4 @@
-require '~/shastic_challenge/models/visit'
+require '/app/models/visit'
 
 describe Visit do
   it 'should clear invalid evid' do

@@ -7,3 +7,5 @@ gem 'mysql2'
 gem 'rubocop'
 
 gem 'activerecord'
+
+gem 'httparty'

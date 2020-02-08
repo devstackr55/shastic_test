@@ -9,3 +9,8 @@ gem 'rubocop'
 gem 'activerecord'
 
 gem 'httparty'
+
+gem 'rspec'
+gem 'simplecov', require: false
+
+gem 'pry'

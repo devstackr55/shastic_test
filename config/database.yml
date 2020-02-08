@@ -1,7 +1,15 @@
-adapter: mysql2
-encoding: utf8mb4
-pool: 5
-username: root
-password: pass
-socket: /var/run/mysqld/mysqld.sock
-database: shastic_challenge_development
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  username: root
+  password: pass
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: shastic_challenge_development
+  pool: 15
+
+test:
+  <<: *default
+  database: shastic_challenge_test

@@ -2,3 +2,4 @@ AllCops:
   Exclude:
   # Rubocop defaults
   - Gemfile
+  - spec/spec_helper.rb

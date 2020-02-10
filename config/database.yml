@@ -2,7 +2,7 @@ primary:
   url: mysql2://root:pass@mysql:3306/
 
 development:
-  url: mysql2://root:pass@mysql:3306/shastic_challenge_development
+  url: mysql2://root:pass@mysql:3306/${DEVELOPMENT_DATABASE}
 
 test:
-  url: mysql2://root:pass@mysql:3306/shastic_challenge_test
+  url: mysql2://root:pass@mysql:3306/${TEST_DATABASE}

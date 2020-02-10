@@ -4,9 +4,7 @@ require '/app/db/migrate/pageviews'
 
 class Migrator
   def initialize(env = 'development')
-    db_file_path = File.expand_path('/app/config/database.yml')
-    db_config_file = File.open(db_file_path)
-    db_config = YAML.safe_load(db_config_file, [], [], true)
+    db_config = load_database_yml(env)
     create_db(db_config, env)
     ActiveRecord::Base.establish_connection(db_config[env])
   end
@@ -16,6 +14,12 @@ class Migrator
   end
 
   private
+
+  def load_database_yml(env)
+    db_config_file = File.read('/app/config/database.yml')
+    db_config_file.gsub!(/\${([^}]+)}/, ENV["#{env.upcase}_DATABASE"])
+    YAML.safe_load db_config_file
+  end
 
   def create_db(db_config, env)
     ActiveRecord::Base.establish_connection(db_config['primary'])

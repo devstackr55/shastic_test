@@ -10,6 +10,10 @@ services:
       - ./:/app
     stdin_open: true
     tty: true
+    environment:
+      - DEVELOPMENT_DATABASE=shastic_challenge_development
+      - TEST_DATABASE=shastic_challenge_test
+      - BASE_DATAFEED_URL=http://www.mocky.io/v2/
 
   mysql:
     build:

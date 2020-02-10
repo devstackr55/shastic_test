@@ -1,5 +1,4 @@
 require '/app/db/migrator'
-require '/app/config/initializers/base_datafeed_url_loader'
 require '/app/lib/datafeed/client'
 require '/app/lib/datafeed/parser'
 require '/app/lib/services/visits_creator'
@@ -14,7 +13,7 @@ def call
   end
 
   begin
-    datafeed_url = "#{BASE_DATAFEED_URL}5e3bf656300000223c2149a9"
+    datafeed_url = "#{ENV['BASE_DATAFEED_URL']}5e3bf656300000223c2149a9"
     client = Client.new(datafeed_url)
     data_parser = Parser.new(client.fetch)
     visits_creator = VisitsCreator.new(data_parser.parse)
